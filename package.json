@@ -2,22 +2,32 @@
   "name": "proyecto-bajo",
   "version": "1.0.0",
   "type": "module",
-  "main": "index.js",
+  "main": "server.js",
+  "description": "Landing page accesible y optimizada sobre el hobby del bajo eléctrico. Proyecto con Express.js, sesiones, galería dinámica y sistema de comentarios.",
   "scripts": {
+    "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/lfalonsoc/proyecto-bajo.git"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "bajo",
+    "bass",
+    "landing-page",
+    "express",
+    "accesibilidad",
+    "performance",
+    "webp",
+    "responsive"
+  ],
+  "author": "Fernando Alonso <lfalonsoc@github>",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/lfalonsoc/proyecto-bajo/issues"
   },
   "homepage": "https://github.com/lfalonsoc/proyecto-bajo#readme",
-  "description": "",
   "dependencies": {
     "dotenv": "^17.2.3",
     "express": "^5.2.1",

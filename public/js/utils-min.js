@@ -1,0 +1,1 @@
+export function validarFormulario(r,o){let a="";return""===r.value&&(a+=`Por favor ${r.placeholder}.\n`,r.focus()),""===o.value&&(a+=`Por favor ${o.placeholder}.\n`,o.focus()),""===a||(alert(a),!1)}

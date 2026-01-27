@@ -1,7 +1,7 @@
 // Importar funciones de otros módulos
-import { cargarParrafo, cargarImagenes, guardarComentario } from './api.js';
-import { renderParrafo, renderGaleria, renderComentarios } from './ui.js';
-import { validarFormulario } from './utils.js';
+import { cargarParrafo, cargarImagenes, guardarComentario, cargarComentarios } from './api-min.js';
+import { renderParrafo, renderGaleria, renderComentarios } from './ui-min.js';
+import { validarFormulario } from './utils-min.js';
 
 async function iniciarApp () {
     // Declaración de variables de los elementos del DOM
@@ -108,6 +108,10 @@ async function iniciarApp () {
         const imagenesGaleria = await cargarImagenes();
         renderGaleria(imagenesGaleria.imagenes);
     });
+
+    // Traer comentarios
+    const comentariosUsuarios = await cargarComentarios();
+    renderComentarios(comentariosUsuarios.comentarios);
 }
 
 iniciarApp();

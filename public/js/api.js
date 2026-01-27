@@ -59,3 +59,20 @@ export async function guardarComentario(usuario, textoComentario) {
         throw error;
     }
 }
+
+export async function cargarComentarios() {
+    try {
+        const res = await fetch("/api/cargarComentarios");
+
+        if (!res.ok) {
+            throw new Error(`HTTP error! status: ${res.status}`);
+        }
+
+        const data = await res.json();
+
+        return data;
+    } catch (error) {
+        console.log("Error al cargar los comentarios: ", error);
+        throw error;
+    }
+}

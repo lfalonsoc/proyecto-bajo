@@ -1,3 +1,4 @@
+import "dotenv/config";
 import express from "express";
 import session from "express-session";
 import { join, dirname } from "path";
@@ -14,7 +15,7 @@ app.use(express.static(join(__dirname, 'public')));
 
 // Configuración de sesión
 app.use(session({
-    secret: process.env.SECRET,
+    secret: process.env.SECRET || "secrect-provisional",
     resave: false,
     saveUninitialized: true
 }));
@@ -78,6 +79,12 @@ app.post("/api/guardarComentario", (req, res) => {
         mensaje: "Comentario Guardado en la sesión",
         comentarios: req.session.comentarios,
     });
+});
+
+// Ruta para obtener comentarios
+app.get("/api/cargarComentarios", (req, res) => {
+    const comentarios = req.session.comentarios || [];
+    res.json({ comentarios });
 });
 
 // Iniciar el servidor

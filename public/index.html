@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Landing page accesible y optimizada de Hobby Bajo">
+    <title>Hobby Bajo</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Menú fijo -->
+    <nav class="main-nav transparent" id="mainNav" aria-label="Navegación principal">
+        <div class="nav-content">
+            <div class="logo">
+                <a href="#inicio">
+                    <img src="img/logo_dark.webp" alt="Logo Bajo" loading="lazy">
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#pasion">Pasión</a></li>
+                <li><a href="#galeria">Galería</a></li>
+                <li><a href="#comentarios">Comentario</a></li>
+            </ul>
+        </div>
+        <button id="modo" aria-pressed="true" aria-label="Alternar modo oscuro y claro">Cambiar tema</button>
+    </nav>
+
+    <!-- Header con imagen de fondo -->
+    <header class="header-container" id="inicio">
+        <div class="header-bg"></div>
+        <div class="header-overlay"></div>
+        <div class="header-content">
+            <div class="header-title">
+                <h1>Bajo</h1>
+                <p>El latido del corazón de una canción.</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Contenido de la página (para probar scroll) -->
+    <main class="page-content">
+        <section class="section" id="pasion">
+            <h2>Pasión</h2>
+            <p id="parrafo"></p>
+        </section>
+        
+        <section class="section" id="galeria" aria-labelledby="titulo-galeria">
+            <h2>Galería</h2>
+            <div class="imagenes" id="imagenes" aria-live="polite"></div>
+            <button id="btnActualizarGaleria">Actualizar Galería</button>
+        </section>
+        
+        <section class="section" id="comentarios" aria-labelledby="titulo-comentarios">
+            <h2>Comentarios</h2>
+            <div class="grid-comentarios">
+                <article class="cardFormulario">
+                    <form class="formulario" id="formulario">
+                        <label for="usuario">Nombres y Apellidos</label>
+                        <input id="usuario" name="usuario" type="text" maxlength="120" placeholder="Digite sus nombres y apellidos" required>
+
+                        <label for="textoComentario">Comentario</label>
+                        <textarea id="textoComentario" name="textoComentario" maxlength="600" placeholder="Digite su comentario" required></textarea>
+
+                        <button type="button" id="btnComentario">Compartir</button>
+                    </form>
+                </article>
+                <article class="cardComentarios" id="listaComentarios" role="region" aria-label="Lista de comentarios" aria-live="polite"></article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>Creado por: Fernando Alonso</p>
+    </footer>
+
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>

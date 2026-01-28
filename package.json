@@ -5,8 +5,8 @@
   "main": "server.js",
   "description": "Landing page accesible y optimizada sobre el hobby del bajo eléctrico. Proyecto con Express.js, sesiones, galería dinámica y sistema de comentarios.",
   "scripts": {
-    "start": "node server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
